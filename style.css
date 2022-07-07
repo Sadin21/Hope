@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    transition: all 2s;
+    padding: 10px 0;
+    z-index: 2;
+    cursor: pointer;
+}
+#nav .title{
+    font-size: 1em;
+    margin: auto 0;
+    color: #FFD523;
+}
+#nav .title span{
+    color: white;
+}
+#nav ul{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-between;
+    margin: auto 0;
+}
+#nav ul li{
+    margin: auto 0;
+    color: white;
+    text-decoration: none;
+}
+#nav ul li:last-child{
+    padding: 10px 30px;
+    background-color: #FFD523;
+    border-radius: 5px;
+    color: black;
+}
+#nav ul li:last-child:hover{
+    color: white;
+}
+#nav .menu{
+    height: 30px;
+    width: 30px;
+    margin: auto 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#nav .menu span{
+    display: block;
+    height: 6px;
+    width: 30px;
+    background-color: #FFD523;
+    border-radius: 10px;
+    transition: .5s;
+}
+#nav .menu input{
+    position: absolute;
+    opacity: 0;
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+}
+#nav .menu span:nth-child(2){
+    transform-origin: 0 0;
+}
+#nav .menu input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(0, 2px);
+}
+#nav .menu span:nth-child(4){
+    transform-origin: 0 100%;
+}
+#nav .menu input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(0, -4px);
+}
+#nav .menu input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+
+/* Jumbotron */
+#jumbotron{
+    height: 640px;
+    width: 100%;
+    background: url('Assets/Banner.jpg');
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+}
+#jumbotron h1{
+    font-family: 'Poppins', sans-serif;
+    margin: 150px  0 0 150px;
+    font-size: 7em;
+    color: white;
+}
+#jumbotron h1:nth-child(2){
+    margin: -60px 150px;
+}
+#jumbotron h2{
+    margin: 40px 0 5px 150px;
+    color: white;
+}
+#jumbotron .button{
+    display: flex;
+}
+#jumbotron .button h2{
+    padding: 10px 30px;
+    background-color: white;
+    color: black;
+    /* margin-right: -130px; */
+    margin: 20px -130px 0 150px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+#jumbotron .button h2:last-child{
+    background-color: #FFD523;
+}
+
+
+/* About */
+#about{
+    height: 800px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 150px auto;
+}
+#about .first{
+    flex-basis: 45%;
+    /* background-color: yellow; */
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+#about .first .left{
+    flex-basis: 40%;
+    padding: 10px 40px;
+}
+#about .first .left h3{
+    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
+    color: #2C2E43;
+    margin-bottom: -30px;
+}
+#about .first .left h3:nth-child(2){
+    color: #FFD523;
+    margin-bottom: 25px;
+}
+#about .first .left p{
+    color: #595260;
+}
+#about .first .left h4{
+    color: white;
+    font-size: 1em;
+    padding: 10px 30px;
+    background-color: #2C2E43;
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 1s;
+    cursor: pointer;
+}
+#about .first .left h4:hover{
+    background-color: #FFD523;
+    color: #2C2E43;
+}
+#about .first .right{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+#about .first .right .row1{
+    flex-basis: 50%;
+    display: flex;
+    flex-basis: row;
+}
+#about .first .right .row1 .top1{
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: left;
+    color: #2C2E43;
+}
+#about .first .right .row1 .top1 i{
+    font-size: 2em;
+    margin: 30px 0 0 30px;
+}
+#about .first .right .row1 .top1 h5{
+    font-size: 1em;
+    margin: 20px 0 0 0;
+    margin-bottom: -10px;
+}
+#about .first .right .row1 .top1 p{
+    font-size: .8em;
+    color: #595260;
+    margin: 20px 0 0 0;
+}
+#about .first .right .row1 .top2{
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: left;
+    color: #2C2E43;
+}
+#about .first .right .row1 .top2 i{
+    font-size: 2em;
+    margin: 30px 0 0 30px;
+}
+#about .first .right .row1 .top2 h5{
+    font-size: 1em;
+    margin: 20px 0 0 0;
+    margin-bottom: -10px;
+}
+#about .first .right .row1 .top2 p{
+    font-size: .8em;
+    color: #595260;
+    margin: 20px 0 0 0;
+}
+#about .first .right .row2{
+    flex-basis: 50%;
+    display: flex;
+    flex-basis: row;
+}
+#about .first .right .row2 .bottom1{
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: left;
+    color: #2C2E43;
+}
+#about .first .right .row2 .bottom1 i{
+    font-size: 2em;
+    margin: 10px 0 0 30px;
+}
+#about .first .right .row2 .bottom1 h5{
+    font-size: 1em;
+    margin: 20px 0 0 0;
+    margin-bottom: -10px;
+}
+#about .first .right .row2 .bottom1 p{
+    font-size: .8em;
+    color: #595260;
+    margin: 20px 0 0 0;
+}
+#about .first .right .row2 .bottom2{
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: left;
+    color: #2C2E43;
+}
+#about .first .right .row2 .bottom2 i{
+    font-size: 2em;
+    margin: 10px 0 0 30px;
+}
+#about .first .right .row2 .bottom2 h5{
+    font-size: 1em;
+    margin: 20px 0 0 0;
+    margin-bottom: -10px;
+}
+#about .first .right .row2 .bottom2 p{
+    font-size: .8em;
+    color: #595260;
+    margin: 20px 0 0 0;
+}
+#about .second{
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: row;
+    padding: 80px 40px;
+}
+#about .second .left{
+    flex-basis: 50%;
+    background: url('Assets/gambar-4b.jpg');
+    background-size: cover;
+    transition: .5s;
+    cursor: pointer;
+}
+#about .second .left:hover{
+    opacity: .9;
+}
+#about .second .right{
+    flex-basis: 50%;
+    padding: 40px 80px;
+}
+#about .second .right h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    margin-bottom: -23px;
+    color: #2C2E43;
+}
+#about .second .right h3 span{
+    color: #FFD523;
+}
+#about .second .right p{
+    margin-top: 40px;
+    color: #595260;
+}
+#about .second .right h4{
+    color: white;
+    font-size: 1em;
+    padding: 10px 30px;
+    background-color: #2C2E43;
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 1s;
+    cursor: pointer;
+}
+#about .second .right h4:hover{
+    background-color: #FFD523;
+    color: #2C2E43;
+}
+
+/* Gallery */
+.gallery{
+    width: 70%;
+    height: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.gallery h3{
+    font-size: 3em;
+    align-items: center;
+    padding: 70px 330px;
+    color: #2C2E43;
+}
+.gallery h3 span{
+    color: #FFD523;
+}
+.gallery .gambar{
+    flex-basis: 65%;
+    background-size: cover;
+    background-image: url('Assets/gambar-7.jpg');
+    margin: 5px;
+}
+.gallery .content{
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: row;
+}
+.gallery .content .img:nth-child(1){
+    flex-basis: 50%;
+    background-image: url('Assets/gambar-5.jpg');
+    background-size: cover;
+    margin: 5px;
+}
+.gallery .content .img:nth-child(2){
+    flex-basis: 50%;
+    background-image: url('Assets/gambar-6.jpg');
+    background-size: cover;
+    margin: 5px;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 576px) {
+    #nav{
+        position: fixed;
+    }
+    #nav .title{
+        color: #FFD523;
+    }
+    #nav ul{
+        display: flex;
+        flex-direction: column;
+        background-color: #595260;
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 57px;
+        width: 100%;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 1s;
+        z-index: -1;
+        justify-content: space-evenly;
+    }
+    #nav ul.slider{
+        transform: translateX(0);
+    }
+    #nav .menu{
+        display: flex;
+    }
+    #jumbotron h1{
+        font-size: 4em;
+        margin: 200px 0 0 50px ; 
+    }
+    #jumbotron h1:nth-child(2){
+        margin: -25px 0 0 50px;
+    }
+    #jumbotron h2{
+        margin: 10px 0 5px 50px;
+        font-size: 1em;
+    }
+    #jumbotron .button h2{
+        margin: 20px -40px 0 50px;
+    }
+    #about{
+        height: 1500px;
+    }
+    #about .first{
+        flex-direction: column;
+    }
+    #about .first .left{
+        padding: 0 10px;
+    }
+    #about .first .left h3{
+        font-size: 2em;
+        margin-bottom: -20px;
+    }
+    #about .first .right{
+        text-align: left;
+        margin-top: 60px;
+    }
+    #about .first .right .row2{
+        margin-top: 60px;
+    }
+    #about .second{
+        flex-direction: column;
+        padding: 0;
+        margin-top: 80px;
+    }
+    #about .second .right{
+        padding: 10px;
+    }
+    #about .second .right h3{
+        font-size: 2.5em;
+        margin-bottom: -15px;
+    }
+    #about .second .right p{
+        display: none;
+    }
+
+}
+
